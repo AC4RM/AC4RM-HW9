@@ -6,9 +6,13 @@ class BankAccount(object):
     pass
 
 
-sql_query = '''
+sql_query_1 = '''
 
-            '''
+              '''
+
+sql_query_2 = '''
+
+              '''
 
 
 def train_model():
@@ -22,7 +26,8 @@ def train_model():
     imputation_dict = titanic1.groupby(['PClass', 'SexCode']).mean().to_dict()
     # Find the index of missing values
     impute_index = titanic1.Age.isnull()
-    titanic1.loc[impute_index, 'Age'] = titanic1[impute_index].apply(lambda x: imputation_dict['Age'][(x[0], x[1])], axis=1)
+    titanic1.loc[impute_index, 'Age'] = titanic1[impute_index].apply(lambda x: imputation_dict['Age'][(x[0], x[1])],
+                                                                     axis=1)
     # Convert 1st, 2nd, 3rd to 1, 2, 3
     titanic1.PClass = titanic1.PClass.map(lambda t: int(t[0]))
 
@@ -35,6 +40,3 @@ def word_count(input_string, number=False):
     number: whether to count the numbers
     """
     pass
-
-
-
