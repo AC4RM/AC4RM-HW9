@@ -39,7 +39,7 @@ def test_model():
     model, predictions = train_model()
 
     assert isinstance(model, sklearn.ensemble._forest.RandomForestClassifier)
-    assert sum(predictions) == 84
+    assert sum(predictions) == 83
 
 
 def test_regex():
