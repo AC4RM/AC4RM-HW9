@@ -22,7 +22,7 @@
    - Follow the same preprocessing steps as HW3
    - Split the data into training and testing set (80/20) and use a random seed of 42.
    - For `n_estimators` in `range(10, 500, 40)`, find the optimal value that gives you the best score on the test set.
-   - Return the random forest model fitted on the training set with the optimal value you found in the previous step and along with the predictions made on the test set.
+   - Return the random forest model fitted on the training set with the optimal value you found in the previous step and along with the predictions made on the test set. Make sure you use `np.random.seed(42)` when you select the `n_estimators`.
 4. Define a function called `word_count` that takes a string and an optional parameter called `number` as the input.
    - The `number` parameter is set to `False` by default. You should count numbers in the input string if `number` is equal to `True`.
    - Hint: make sure you are **NOT** counting duplicates of the same word, i.e. `It` and `it` should be considered as the same word.
